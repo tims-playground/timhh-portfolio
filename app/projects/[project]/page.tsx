@@ -50,8 +50,6 @@ export default async function Project({ params }: Props) {
     qParams: { slug },
   });
 
-  console.log("project", project);
-
   return (
     <main className="max-w-6xl mx-auto lg:px-16 px-8">
       <Slide>
