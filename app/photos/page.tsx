@@ -19,13 +19,13 @@ const images = [
 ];
 
 export const metadata: Metadata = {
-  title: "Photos | Victor Eke",
+  title: "Photos | Tim Hodgson",
   metadataBase: new URL("https://victoreke.com/photos"),
-  description: "Explore photos taken by Victor Eke",
+  description: "Explore photos taken by Tim Hodgson",
   openGraph: {
-    title: "Photos | Victor Eke",
+    title: "Photos | Tim Hodgson",
     url: "https://victoreke.com/photos",
-    description: "Explore photos taken by Victor Eke",
+    description: "Explore photos taken by Tim Hodgson",
     images:
       "https://res.cloudinary.com/victoreke/image/upload/v1692635149/victoreke/photos.png",
   },
@@ -36,7 +36,7 @@ export default function Photos() {
     <main className="max-w-7xl mx-auto md:px-16 px-6 lg:mt-32 mt-20">
       <PageHeading
         title="Photos"
-        description="This page is still under construction..."
+        description="Cool photos I've taken over the years"
       />
       <figure className="my-6">
         <Slide delay={0.12} className="flex flex-wrap gap-2">

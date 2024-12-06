@@ -5,19 +5,17 @@ import type { ProfileType } from "@/types";
 import { PortableText } from "@portabletext/react";
 import { BiEnvelope, BiLinkExternal, BiSolidDownload } from "react-icons/bi";
 import { CustomPortableText } from "../components/shared/CustomPortableText";
-import Heroes from "../components/pages/Heroes";
-import Usage from "../components/pages/Usage";
 import { Slide } from "../animation/Slide";
 import { sanityFetch } from "@/lib/sanity.client";
 import RefLink from "../components/shared/RefLink";
 
 export const metadata: Metadata = {
-  title: "About | Victor Eke",
+  title: "About | Tim Hodgson",
   metadataBase: new URL("https://victoreke.com/about"),
   description:
     "Learn more about my skills, experience and technical background",
   openGraph: {
-    title: "About | Victor Eke",
+    title: "About | Tim Hodgson",
     url: "https://victoreke.com/about",
     description:
       "Learn more about my skills, experience and technical background",
@@ -45,12 +43,12 @@ export default async function About() {
                     build the future.
                   </h1>
 
-                  <div className="dark:text-zinc-400 text-zinc-600 leading-relaxed">
+                  {/* <div className="dark:text-zinc-400 text-zinc-600 leading-relaxed">
                     <PortableText
                       value={data.fullBio}
                       components={CustomPortableText}
                     />
-                  </div>
+                  </div> */}
                 </Slide>
               </div>
 
@@ -101,10 +99,9 @@ export default async function About() {
                 </Slide>
               </aside>
             </section>
-            <Slide delay={0.14}>
+            {/* <Slide delay={0.14}>
               <Usage />
-            </Slide>
-            <Heroes />
+            </Slide> */}
           </div>
         ))}
     </main>
