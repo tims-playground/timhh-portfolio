@@ -1,4 +1,4 @@
-import { defineConfig } from "sanity";
+import { defineConfig, SchemaTypeDefinition } from "sanity";
 import { structureTool } from "sanity/structure";
 import { visionTool } from "@sanity/vision";
 import { schemaTypes } from "./schemas";
@@ -13,5 +13,5 @@ export default defineConfig({
   projectId,
   dataset,
   plugins: [structureTool(), visionTool(), codeInput(), table()],
-  schema: { types: schemaTypes },
+  schema: { types: schemaTypes as SchemaTypeDefinition[] },
 });

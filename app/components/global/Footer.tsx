@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="flex md:flex-row flex-col items-center gap-x-2">
             <h3 className="font-inter">Built with:</h3>
             <ul className="flex items-center gap-x-2 text-sm dark:text-zinc-600 text-zinc-400 md:mt-0 mt-3">
-              <li>
+              {/* <li>
                 <a
                   href="https://sanity.io"
                   rel="noreferrer noopener"
@@ -27,7 +27,7 @@ export default function Footer() {
                   />{" "}
                   Sanity
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href="https://nextjs.org"
@@ -44,7 +44,7 @@ export default function Footer() {
                   Next.js
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="https://vercel.com"
                   rel="noreferrer noopener"
@@ -59,7 +59,7 @@ export default function Footer() {
                   />{" "}
                   Vercel
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 

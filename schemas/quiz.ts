@@ -1,11 +1,9 @@
 import { defineField, defineType } from "sanity";
-import { BiCommand } from "react-icons/bi";
 
 export default defineType({
   name: "quiz",
   title: "Quiz",
   type: "object",
-  icon: BiCommand,
   fields: [
     defineField({
       name: "question",

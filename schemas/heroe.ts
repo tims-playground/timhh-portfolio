@@ -1,11 +1,9 @@
-import { FaGlasses } from "react-icons/fa";
 import { defineType, defineField } from "sanity";
 
 export default defineType({
   name: "heroe",
   title: "Heroes",
   type: "document",
-  icon: FaGlasses,
   fields: [
     defineField({
       name: "name",

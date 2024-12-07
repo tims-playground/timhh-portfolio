@@ -136,10 +136,10 @@ const otherImages = [
   //   id: "18",
   //   src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_8525.jpeg",
   // },
-  {
-    id: "19",
-    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_8547.png",
-  },
+  // {
+  //   id: "19",
+  //   src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_8547.png",
+  // },
 ];
 
 export const metadata: Metadata = {

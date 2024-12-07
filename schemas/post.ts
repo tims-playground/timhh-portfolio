@@ -1,12 +1,10 @@
 import { defineField, defineType } from "sanity";
-import { BiBookOpen } from "react-icons/bi";
 import Author from "./author";
 
 export default defineType({
   name: "Post",
   title: "Blog Posts",
   type: "document",
-  icon: BiBookOpen,
   fields: [
     defineField({
       name: "title",

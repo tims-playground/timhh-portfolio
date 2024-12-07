@@ -1,12 +1,10 @@
 import { defineField, defineType } from "sanity";
 import { TableWidget } from "@/app/components/widgets/TableWidget";
-import { LuTable } from "react-icons/lu";
 
 export const table = defineType({
   name: "customTable",
   title: "Table",
   type: "object",
-  icon: LuTable,
   fields: [
     defineField({
       name: "table",
