@@ -3,18 +3,142 @@ import Image from "next/image";
 import { Metadata } from "next";
 import PageHeading from "@/app/components/shared/PageHeading";
 
-const images = [
+const categories = ["Path", "Levo", "3d Printing", "Takt", "Other"];
+
+const pathImages = [
+  {
+    id: "7",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_5792.jpeg",
+  },
+  {
+    id: "9",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_5682.jpeg",
+  },
+  {
+    id: "10",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_5196.jpeg",
+  },
+  {
+    id: "5",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_5953.jpeg",
+  },
+  {
+    id: "6",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_5795.jpeg",
+  },
+  {
+    id: "4",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_6263.jpeg",
+  },
+  {
+    id: "11",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_6701.jpeg",
+  },
+  {
+    id: "12",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_6698.jpeg",
+  },
+  {
+    id: "13",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_6710.jpeg",
+  },
+  {
+    id: "28",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_7089.jpeg",
+  },
+  {
+    id: "29",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_7103.jpeg",
+  },
+  {
+    id: "30",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_5081.jpeg",
+  },
+  {
+    id: "31",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_5053.jpeg",
+  },
+  {
+    id: "32",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_8728.jpeg",
+  },
+];
+
+const levoImages = [
   {
     id: "1",
-    src: "https://images.unsplash.com/photo-1585618256754-241cfe4e8113?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=100",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_6450.jpeg",
   },
   {
     id: "2",
-    src: "https://images.unsplash.com/photo-1585619203238-70e7631cc672?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8OXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_6447.jpeg",
   },
   {
     id: "3",
-    src: "https://images.unsplash.com/photo-1585619443911-c2bb23fb2a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/SLAM+(1).gif",
+  },
+  {
+    id: "4",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_5593.jpeg",
+  },
+  {
+    id: "5",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_5599.jpeg",
+  },
+  {
+    id: "6",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_5646.jpeg",
+  },
+];
+
+const otherImages = [
+  {
+    id: "7",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_8729.jpeg",
+  },
+  {
+    id: "8",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_8726.jpeg",
+  },
+  {
+    id: "9",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_8727.jpeg",
+  },
+  {
+    id: "10",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_8575.png",
+  },
+  {
+    id: "11",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_8631.jpeg",
+  },
+  // {
+  //   id: "12",
+  //   src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_8544.jpeg",
+  // },
+  {
+    id: "13",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_7953.jpeg",
+  },
+  {
+    id: "14",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_7839.jpeg",
+  },
+  {
+    id: "15",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_7551.jpeg",
+  },
+  {
+    id: "16",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_7955.jpeg",
+  },
+  // {
+  //   id: "18",
+  //   src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_8525.jpeg",
+  // },
+  {
+    id: "19",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_8547.png",
   },
 ];
 
@@ -34,13 +158,10 @@ export const metadata: Metadata = {
 export default function Photos() {
   return (
     <main className="max-w-7xl mx-auto md:px-16 px-6 lg:mt-32 mt-20">
-      <PageHeading
-        title="Photos"
-        description="Cool photos I've taken over the years"
-      />
+      <PageHeading title="Path Photos" description="" />
       <figure className="my-6">
         <Slide delay={0.12} className="flex flex-wrap gap-2">
-          {images.map((image) => (
+          {pathImages.map((image) => (
             <Image
               key={image.id}
               src={image.src}
@@ -52,6 +173,40 @@ export default function Photos() {
           ))}
         </Slide>
       </figure>
+      <div className="mt-2">
+        <PageHeading title="Levo Photos" description="" />
+        <figure className="my-6">
+          <Slide delay={0.12} className="flex flex-wrap gap-2">
+            {levoImages.map((image) => (
+              <Image
+                key={image.id}
+                src={image.src}
+                alt="playing guitar"
+                width={350}
+                height={800}
+                className="dark:bg-primary-bg bg-secondary-bg"
+              />
+            ))}
+          </Slide>
+        </figure>
+      </div>
+      <div className="mt-2">
+        <PageHeading title="Other Photos" description="" />
+        <figure className="my-6">
+          <Slide delay={0.12} className="flex flex-wrap gap-2">
+            {otherImages.map((image) => (
+              <Image
+                key={image.id}
+                src={image.src}
+                alt="playing guitar"
+                width={350}
+                height={800}
+                className="dark:bg-primary-bg bg-secondary-bg"
+              />
+            ))}
+          </Slide>
+        </figure>
+      </div>
     </main>
   );
 }
