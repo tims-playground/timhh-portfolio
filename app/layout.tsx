@@ -18,9 +18,8 @@ const options = {
   title: "Tim Hodgson | Software Developer",
   description:
     "Tim Hodgson is a Software Developer and Technical Writer who is passionate about building solutions and contributing to open source communities",
-  url: "https://victoreke.com",
-  ogImage:
-    "https://res.cloudinary.com/victoreke/image/upload/v1692635746/victoreke/og.png",
+  url: "https://timtech.app",
+  ogImage: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_5953.jpeg",
 };
 
 export const metadata: Metadata = {
@@ -30,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: options.title,
     url: options.url,
-    siteName: "victoreke.com",
+    siteName: "timtech.app",
     locale: "en-US",
     type: "website",
     description: options.description,
@@ -40,7 +39,7 @@ export const metadata: Metadata = {
     canonical: options.url,
   },
   other: {
-    "google-site-verification": "IzcWMgn5Qjf-LCtA337KTGjivsf9bmod_1pZ-jxYQh8",
+    // "google-site-verification": "IzcWMgn5Qjf-LCtA337KTGjivsf9bmod_1pZ-jxYQh8",
   },
 };
 

@@ -17,7 +17,7 @@ export default function Comments() {
     <></>
     // <Giscus
     //   id="comments"
-    //   repo="evavic44/victoreke.com"
+    //   repo="evavic44/timtech.app"
     //   repoId={giscusRepoId}
     //   category="Announcements"
     //   categoryId={giscusCategoryId}

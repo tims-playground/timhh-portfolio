@@ -144,11 +144,11 @@ const otherImages = [
 
 export const metadata: Metadata = {
   title: "Photos | Tim Hodgson",
-  metadataBase: new URL("https://victoreke.com/photos"),
+  metadataBase: new URL("https://timtech.app/photos"),
   description: "Explore photos taken by Tim Hodgson",
   openGraph: {
     title: "Photos | Tim Hodgson",
-    url: "https://victoreke.com/photos",
+    url: "https://timtech.app/photos",
     description: "Explore photos taken by Tim Hodgson",
     images:
       "https://res.cloudinary.com/victoreke/image/upload/v1692635149/victoreke/photos.png",

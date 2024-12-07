@@ -11,12 +11,12 @@ import RefLink from "../components/shared/RefLink";
 
 export const metadata: Metadata = {
   title: "About | Tim Hodgson",
-  metadataBase: new URL("https://victoreke.com/about"),
+  metadataBase: new URL("https://timtech.app/about"),
   description:
     "Learn more about my skills, experience and technical background",
   openGraph: {
     title: "About | Tim Hodgson",
-    url: "https://victoreke.com/about",
+    url: "https://timtech.app/about",
     description:
       "Learn more about my skills, experience and technical background",
     images:

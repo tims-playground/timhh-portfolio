@@ -7,11 +7,11 @@ import PageHeading from "@/app/components/shared/PageHeading";
 
 export const metadata: Metadata = {
   title: "Blog | Tim Hodgson",
-  metadataBase: new URL("https://victoreke.com/blog"),
+  metadataBase: new URL("https://timtech.app/blog"),
   description: "Read latest stories from Tim Hodgson's Blog",
   openGraph: {
     title: "Blog | Tim Hodgson",
-    url: "https://victoreke.com/blog",
+    url: "https://timtech.app/blog",
     description: "Read latest stories from Tim Hodgson's Blog",
     images:
       "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/blog.png",
