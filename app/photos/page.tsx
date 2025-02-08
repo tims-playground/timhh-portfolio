@@ -125,12 +125,36 @@ const otherImages = [
     src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_7839.jpeg",
   },
   {
-    id: "15",
-    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_7551.jpeg",
-  },
-  {
     id: "16",
     src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_7955.jpeg",
+  },
+  {
+    id: "17",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/site_1.jpeg",
+  },
+  {
+    id: "18",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/site_2.jpeg",
+  },
+  // {
+  //   id: "21",
+  //   src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/site_5.jpeg",
+  // },
+  {
+    id: "22",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/site_6.jpeg",
+  },
+  {
+    id: "23",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/site_7.jpg",
+  },
+  // {
+  //   id: "24",
+  //   src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/site_8.jpg",
+  // },
+  {
+    id: "25",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/site_15.png",
   },
   // {
   //   id: "18",
