@@ -156,6 +156,10 @@ const otherImages = [
     id: "25",
     src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/site_15.png",
   },
+  {
+    id: "26",
+    src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/site_12.jpeg",
+  },
   // {
   //   id: "18",
   //   src: "https://siteassetsinfo.s3.us-east-1.amazonaws.com/IMG_8525.jpeg",
