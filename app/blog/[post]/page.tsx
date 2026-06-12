@@ -20,9 +20,9 @@ import { readTime } from "@/app/utils/readTime";
 import PageHeading from "@/app/components/shared/PageHeading";
 
 type Props = {
-  params: {
+  params: Promise<{
     post: string;
-  };
+  }>;
 };
 
 const fallbackImage: string =
@@ -30,55 +30,55 @@ const fallbackImage: string =
 
 // Dynamic metadata for SEO
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = params.post;
-  const post: PostType = await sanityFetch({
+  const { post: slug } = await params;
+  const postData: PostType = await sanityFetch({
     query: singlePostQuery,
     tags: ["Post"],
     qParams: { slug },
   });
 
-  if (!post) {
+  if (!postData) {
     notFound();
   }
 
   return {
-    title: `${post.title}`,
-    metadataBase: new URL(`https://timtech.app/blog/${post.slug}`),
-    description: post.description,
-    publisher: post.author.name,
-    keywords: post.tags,
+    title: `${postData.title}`,
+    metadataBase: new URL(`https://timtech.app/blog/${postData.slug}`),
+    description: postData.description,
+    publisher: postData.author.name,
+    keywords: postData.tags,
     alternates: {
-      canonical: post.canonicalLink || `https://timtech.app/blog/${post.slug}`,
+      canonical: postData.canonicalLink || `https://timtech.app/blog/${postData.slug}`,
     },
     openGraph: {
       images:
-        urlFor(post.coverImage?.image).width(1200).height(630).url() ||
+        urlFor(postData.coverImage?.image).width(1200).height(630).url() ||
         fallbackImage,
-      url: `https://timtech.app/blog/${post.slug}`,
-      title: post.title,
-      description: post.description,
+      url: `https://timtech.app/blog/${postData.slug}`,
+      title: postData.title,
+      description: postData.description,
       type: "article",
       siteName: "timtech.app",
-      authors: post.author.name,
-      tags: post.tags,
-      publishedTime: post._createdAt,
-      modifiedTime: post._updatedAt || "",
+      authors: postData.author.name,
+      tags: postData.tags,
+      publishedTime: postData._createdAt,
+      modifiedTime: postData._updatedAt || "",
     },
     twitter: {
-      title: post.title,
-      description: post.description,
+      title: postData.title,
+      description: postData.description,
       images:
-        urlFor(post.coverImage?.image).width(680).height(340).url() ||
+        urlFor(postData.coverImage?.image).width(680).height(340).url() ||
         fallbackImage,
-      creator: `@${post.author.twitterUrl.split("twitter.com/")[1]}`,
-      site: `@${post.author.twitterUrl.split("twitter.com/")[1]}`,
+      creator: `@${postData.author.twitterUrl.split("twitter.com/")[1]}`,
+      site: `@${postData.author.twitterUrl.split("twitter.com/")[1]}`,
       card: "summary_large_image",
     },
   };
 }
 
 export default async function Post({ params }: Props) {
-  const slug = params.post;
+  const { post: slug } = await params;
   const post: PostType = await sanityFetch({
     query: singlePostQuery,
     tags: ["Post"],
@@ -212,7 +212,7 @@ export default async function Post({ params }: Props) {
               <h3 className="text-xl font-semibold tracking-tight mb-4">
                 Featured
               </h3>
-              <FeaturedPosts params={params.post} />
+              <FeaturedPosts params={slug} />
             </section>
           </aside>
         </Slide>
